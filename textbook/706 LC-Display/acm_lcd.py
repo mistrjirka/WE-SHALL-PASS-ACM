@@ -83,9 +83,9 @@ def getMultipleInputs(num_of_inputs):
 
 def render_integer(s, n):
     s = int(s)
-    frame_buffer = [[" " for _ in range((s+3)*len(n))] for _ in range(2*s+3)]
+    frame_buffer = [[" " for _ in range((s+3)*len(n)-1)] for _ in range(2*s+3)]
     for index, num in enumerate(list(n)):
-        working_offset = index*(s+2)
+        working_offset = index*(s+3)
         num = int(num)
         template = numbers[num]
         vertical_index = 0
@@ -94,7 +94,7 @@ def render_integer(s, n):
             if j%2 == 0:
                 y_offset = (vertical_index) * (s+1)
                 for x in range(s):
-                    x_offset = working_offset + x+1
+                    x_offset = working_offset + x + 1
                     frame_buffer[y_offset][x_offset] = template[j][0]
                 vertical_index+=1
             else:
@@ -105,18 +105,20 @@ def render_integer(s, n):
                         frame_buffer[y_offset][x_offset] = char
                 
                 horizontal_index+=1
+                
     return frame_buffer
 
 def print_number(frame_buffer):
     for line in frame_buffer:
         for pixel in line:
-            print(pixel, end=" ")
+            print(pixel, end="")
         print()
+    print()
 
 if __name__ == "__main__":
     s, n = getMultipleInputs(2)
     results = []
-    while s != "0" and n != "0":
+    while s != "0" or n != "0":
         print_number(render_integer(s, n))
         s, n = getMultipleInputs(2)
     
