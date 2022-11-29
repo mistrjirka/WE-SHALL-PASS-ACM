@@ -1,0 +1,55 @@
+Bob a alice:
+    
+    INPUT: 25114
+
+    Pokud narazíš na ilegalní možnost nezvedá se ti počet možnosti.
+
+    Extra pozor na nulu.
+ 
+
+
+    Kolik je možností spojit písmena.
+    písmena od 1 do 26, A.....Z
+
+Diving for gold:
+
+    Potápění pro cenné předměty. Můžeš se ponořit a vynořit pouze s jedním předmětu.
+
+    Omezeny pocet Oxygenu.
+    
+    Hloubky a ceny předmětů jsou známy. Je známa i doba na vytazeni predmetu.
+
+    S každým předmětem se snažíme vytěžit co nejvetší cenu za co nejmenší čas, nelze překročit množství kyslíku.
+    Pro získání zisku za předmět musíme zaplatit nároky (čas vytažení)
+
+
+
+    Pro vytažené předměty = celkové nároky < kyslík
+
+    Konrkétní případ: 5 předmětů, nároky {3, 1 ,4, 5, 2}, cena = {20, 50, 40, 10, 30}, celkový čas k dispozici = 11 (kapacita)
+
+    20, 3
+    50, 1
+    10, 5
+    30, 2
+    40, 4
+
+    Zázračná tabulka, máš excel.
+
+    Podobná úloha: Knapsack problem Uloha 0/1
+
+Rod cutting:
+    input: Delka tyce
+
+    Zkrácená tabulka, opět excel.
+
+    Varianta B)
+        Místa řezu jsou dána
+        Cena za řez je úměrná délce řezané části.
+
+
+
+Nově naučenné techniky:
+    Kouzelná taulka.
+    Přemýšlení nad zvyšováním počtu možností s narůstajícím počtem písmen.
+    Change matrix multiplications

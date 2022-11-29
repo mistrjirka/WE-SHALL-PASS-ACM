@@ -1,0 +1,5 @@
+při 128: 48.391 vteřin
+při 240: 29.452
+při počítání maxima: 27.662
+
+počítání při for each: 

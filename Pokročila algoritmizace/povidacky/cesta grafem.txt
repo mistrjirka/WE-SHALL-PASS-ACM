@@ -1,0 +1,8 @@
+Soused = dva vrcholy spojené hranou (čára v grafu)
+Typy grafů:
+	Vážený/Nevážený
+	Organizovaný/Neorganizovaný
+Algoritmy na prohledání grafů:
+	Deep search algorithm:
+		Máme tabulku sousedů a zároveň pole naštívených vrcholů
+		Pomocí toho navštívíme každý vrchol

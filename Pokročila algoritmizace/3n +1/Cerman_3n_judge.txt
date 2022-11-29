@@ -1,0 +1,52 @@
+# Initializes numbers between start and end
+def initNumbers(start, end):
+    array = []
+    if start < end:
+        for index in range(start, end + 1):
+            array.append(index)
+    elif start > end:
+        for index in range(end, start + 1):
+            array.append(index)
+    else:
+        array.append(start)
+    return array
+
+
+# Calculating results of 3n+1 for num1
+def calculateResult(num1):
+    loopCount = 1
+    tempNum = num1
+    while True:
+        if tempNum == 1:
+            break
+        elif tempNum % 2 == 0:
+            tempNum = tempNum / 2
+        else:
+            tempNum = 3 * tempNum + 1
+        loopCount += 1
+    return loopCount
+
+
+# Main function
+def main():
+    while tempInput := input():
+        # Creating variables
+        firstNum, secondNum = tempInput.split()
+        firstNum = int(firstNum)
+        secondNum = int(secondNum)
+        numbers = initNumbers(firstNum, secondNum)  # Generate numbers between firstNum and secondNum
+        maxLoopCount = 0
+
+        # Calculating max loop length
+        for x in numbers:
+            loopCount = calculateResult(x)
+            if loopCount > maxLoopCount:
+                maxLoopCount = loopCount
+
+        # Printing result
+        print(firstNum, secondNum, maxLoopCount)
+
+
+# Start of program
+if __name__ == '__main__':
+    main()

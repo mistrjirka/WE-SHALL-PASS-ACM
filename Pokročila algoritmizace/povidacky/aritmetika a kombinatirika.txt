@@ -1,0 +1,6 @@
+Problém paskalův trojúhelník.
+Input číslo.
+Output číslo řádku na kterém se nachází input.
+Pokud nevíš co je paskalův trojúhelník googluj.
+
+Problem Deprime numbers
